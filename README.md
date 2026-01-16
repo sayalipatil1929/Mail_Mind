@@ -1,5 +1,4 @@
-## 📧🤖 MailMind – AI Email Reply Assistant
----
+#📧🤖 MailMind – AI Email Reply Assistant
 ## 🧠 Project Overview
 * MailMind is a web-based application that generates professional email replies using AI. It helps users save time by automatically drafting polite and context-aware responses.
 ---
@@ -35,7 +34,7 @@ Built an AI-powered email reply assistant that:
 * Real-time response rendering
 --- 
 ## 📁 Project Structure
-### MailMind/<br> 
+MailMind/<br> 
 ├── app.py<br>
 ├── requirements.txt<br>
 ├── .env.example<br>
