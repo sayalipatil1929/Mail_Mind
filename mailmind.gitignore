@@ -1,0 +1,4 @@
+mailenv/
+.env
+__pycache__/
+.vscode/
