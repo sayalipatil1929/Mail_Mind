@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Email Reply Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>AI Email Reply Assistant</h2>
+
+    <textarea id="email" placeholder="Paste email here..."></textarea>
+
+    <button onclick="generateReply()">Generate Reply</button>
+
+    <textarea id="reply" placeholder="Generated reply will appear here..."></textarea>
+</div>
+
+<script>
+function generateReply() {
+    const email = document.getElementById("email").value;
+
+    fetch("/generate-reply", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("reply").value = data.reply;
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
+</script>
+
+
+</body>
+</html>
 
